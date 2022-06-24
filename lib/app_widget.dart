@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:rispar/app/_design_system/styles/themes.dart';
+import 'package:asuka/asuka.dart' as asuka;
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -12,12 +13,12 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       title: 'Flutter Slidy',
+      builder: asuka.builder,
       debugShowCheckedModeBanner: false,
       theme: Themes.lightTheme,
-      routeInformationParser: Modular.routeInformationParser,
-      routerDelegate: Modular.routerDelegate,
-    );
+      initialRoute: '/',
+    ).modular();
   }
 }
