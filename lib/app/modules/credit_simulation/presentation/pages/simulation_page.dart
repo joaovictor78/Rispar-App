@@ -31,6 +31,8 @@ class _SimulationPageState extends State<SimulationPage> {
   void dispose() {
     _controller.pageController.dispose();
     _controller.progressBarAnimationStore.value = 0.25;
+    _controller.ltvValueSelected = 1;
+    _controller.termValueSelected = 1;
     _controller.simulationStore.value =
         FormsStepByStepInProgressSimulationState();
     super.dispose();
