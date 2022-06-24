@@ -17,7 +17,6 @@ Ademais, cabe destacar que, o contéudo dessa documentação não será estátic
 A Versão do flutter que é utilizada neste projeto foi a 2.12.1.
 
 ## III Apresentão geral da Arquitetura 
-### Modules
 
 O sistema foi dividido de forma modular, baseado na jornada do usuario, e em caso um modulo abranja outras funcionalidades como por exemplo, dentro de uma tela principal há uma barra de navegação, pode-se criar um modulo start contendo submodulos dentro do modulo como (home, simulações anteriores, verficar cotação do bitcoin etc) por exemplo: 
   - **modules**: 
@@ -49,24 +48,6 @@ Leia mais sobre:
    - [**Value Objects**]("https://www.macoratti.net/20/11/c_valueobj1.htm")
 
 ![image](https://user-images.githubusercontent.com/53379557/175559723-dafd93a1-2420-46c5-b1e7-ac814bcf4f2e.png)
-
-## IV Práticas recomendaveis de segurança 
-É altamente recomendavel, e utilizado nesse projeto o uso do recurso "dart-define" para o uso dedados sensiveis como: url's, chaves de api, entre outros dados, packages como .env e variantes não
-criptografam esses dados e usando esses packages para dados privados e sensiveis podem deixa-los vulnaraveis mesmo após a geração do appbundle ou ipa. 
-Para mais informações consulte: 
-- [**Dart-define documentation**]("https://dartcode.org/docs/using-dart-define-in-flutter/")
-- [**Praticas de segurança**]("https://medium.com/flutter-community/how-to-setup-dart-define-for-keys-and-secrets-on-android-and-ios-in-flutter-apps-4f28a10c4b6c")
-
-## V Práticas de gerencia e qualidade de codigo utilizadas 
-### Testes
-   - Testes são fundamentais para assegurar a qualidade do código e das regras de negocio, tal prática é facilitada devido a implantação do Clean Dart, uma vez que cada camadará terá responsabilidade unica. 
-Mocks
-   - Para a implementação de Mocks, foi utilizado o Mockito. 
-
-## VI Recursos de Terceiros
-Neste projeto foram utilizados os seguintes pacotes:
-
-flutter_modular - Auxilia na utilização de injeção de depeência, além de possuir um sistema de gerenciamento de rotas inteligente.
 
 dio - Cliente HTTP
 
