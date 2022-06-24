@@ -29,7 +29,14 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     await tester
         .pumpWidget(buildTestableWidget(const InformLoanAmountComponent()));
-    final description = find.byKey(const Key("description"));
-    expect(description, findsOneWidget);
+
+    Finder widgetFinder = find.byKey(const Key("description"));
+    final richText0Widget = tester.element(widgetFinder).widget as RichText;
+
+    expect(((richText0Widget.text as TextSpan).children![0] as TextSpan).text,
+        'R\$ 1000');
+
+    expect(((richText0Widget.text as TextSpan).children![2] as TextSpan).text,
+        'R\$ 300.000');
   });
 }
