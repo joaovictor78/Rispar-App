@@ -48,6 +48,7 @@ Leia mais sobre:
    - [**Value Objects**]("https://www.macoratti.net/20/11/c_valueobj1.htm")
 
 ![image](https://user-images.githubusercontent.com/53379557/175559723-dafd93a1-2420-46c5-b1e7-ac814bcf4f2e.png)
+IV Pacotes de Terceiros
 
 dio - Cliente HTTP
 
@@ -66,7 +67,7 @@ intl - Auxilia na conversão e formatação de valores como monetarios, datas et
 flutter_masked_text2 - Auxilia na criação de mascaras para o TextFormField.
 
 
-## VII Boas práticas de desenvolvimento 
+## V Boas práticas de desenvolvimento 
 IMPORTANTE: Deve-se atentar que por se tratar de um sistema comercial que envolve valores monetarios o uso do double ou float para armazenar esses valores, devem 
 ser feito com cautela, pois apresentam imprecisões, além disso deve-se criar testes unitários para os diversos cenários envolvendo esses valores, para minimizar a
 ocorrencia de falhas. 
@@ -74,4 +75,4 @@ ocorrencia de falhas.
 Leia Mais: 
 - [**Imprecisão do tipo Float/Double para valores monetarios**]("https://dzone.com/articles/never-use-float-and-double-for-monetary-calculatio#:~:text=All%20floating%20point%20values%20that,store%20it%20as%20it%20is.")
  
-## VIII Biográfias 
+## VI Biográfias 
