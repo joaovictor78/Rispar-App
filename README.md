@@ -17,12 +17,14 @@ O sistema foi dividido de forma modular, baseado na jornada do usuario, e em cas
       - home
       - simulation_history
 Além disso, quando o modulo conter o mesmo fluxo de jornada do usuario, como por exemplo informar os dados necessários para realizar a simulação, eles são divididos em diversas telas, porém é realizado somente um envio para o Backend e fazem parte do mesmo fluxo de jornada do usuario, então pode-se criar somente um modulo para aquele fluxo com diversas pages, por exemplo:
+
 ![image](https://user-images.githubusercontent.com/53379557/175557356-f4ec059d-b773-4afe-9f93-499b634e2528.png)
 Além disso, cada modulo contém seu proprio sistema de arquitetura, cujo o utilizado neste projeto foi o Clean Dart.
 Também é recomendável, e foi utilizado práticas e padrões como SOLID e Injeção de Dependencia, com a finalidade de assegurar um baixo acoplamento de código e facilitar os testes unitários. 
 IMPORTANTE: Para garantir um baixo acoplamento os modulos devem ser totalmente independentes um dos outros e caso haja interação entre eles deve ser colocado no core.
 <u>Core</u>
 O core é o coração do Rispar App, nele ficará todas as dependencias e utilitarios globais da aplicação. 
+
 ![image](https://user-images.githubusercontent.com/53379557/175559057-749722a1-5d73-4a59-94f7-dcf0cb4e7659.png)
 <u>Clean Dart</u>
 ![image](https://user-images.githubusercontent.com/53379557/175559723-dafd93a1-2420-46c5-b1e7-ac814bcf4f2e.png)
