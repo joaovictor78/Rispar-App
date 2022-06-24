@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:rispar/app/_design_system/utils/sizes.dart';
 import '../../../../../_design_system/widgets/custom_button_widget.dart';
 import '../../controllers/simulation_controller.dart';
 
@@ -34,7 +35,9 @@ class _CalculateSimulationComponentState
         child: SingleChildScrollView(
           child: Column(
             children: [
-              _space(30),
+              SizedBox(
+                height: Sizes.dp30(context),
+              ),
               const Align(
                 child: Text(
                   "Valor escolhido",
@@ -52,7 +55,9 @@ class _CalculateSimulationComponentState
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              _space(25),
+              SizedBox(
+                height: Sizes.dp25(context),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -72,7 +77,9 @@ class _CalculateSimulationComponentState
                       ],
                     ),
                   ),
-                  _space(15),
+                  SizedBox(
+                    height: Sizes.dp15(context),
+                  ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       activeTrackColor: const Color(0xFF3F9798),
@@ -114,7 +121,9 @@ class _CalculateSimulationComponentState
                   )
                 ],
               ),
-              _space(25),
+              SizedBox(
+                height: Sizes.dp25(context),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -134,7 +143,9 @@ class _CalculateSimulationComponentState
                       ],
                     ),
                   ),
-                  _space(15),
+                  SizedBox(
+                    height: Sizes.dp15(context),
+                  ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       activeTrackColor: const Color(0xFF3F9798),
@@ -176,7 +187,9 @@ class _CalculateSimulationComponentState
                   )
                 ],
               ),
-              _space(35),
+              SizedBox(
+                height: Sizes.dp30(context),
+              ),
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -187,7 +200,9 @@ class _CalculateSimulationComponentState
                       fontWeight: FontWeight.w600),
                 ),
               ),
-              _space(10),
+              SizedBox(
+                height: Sizes.dp10(context),
+              ),
               Row(
                 children: const [
                   Flexible(
