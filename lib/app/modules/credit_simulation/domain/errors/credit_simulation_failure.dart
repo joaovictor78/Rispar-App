@@ -3,7 +3,10 @@ import '../../../../core/errors/general_failures.dart';
 
 class CreditSimulationNoInternetConnection extends NoInternetConection {}
 
-class GeneralFailure implements Exception {}
+class GeneralFailure implements Exception {
+  String message;
+  GeneralFailure(this.message);
+}
 
 class UserCredentialsInvalid extends Failure {
   @override
