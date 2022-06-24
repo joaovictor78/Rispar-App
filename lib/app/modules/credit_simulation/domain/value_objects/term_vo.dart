@@ -7,7 +7,7 @@ class TermVO {
     if (_availableDeadlines.contains(term)) {
       _term = term;
     } else {
-      throw LTVNotAvailable(message: "O prazo informado não está disponível");
+      throw TermNotAvailable(message: "O prazo informado não está disponível");
     }
   }
   get term => _term;
