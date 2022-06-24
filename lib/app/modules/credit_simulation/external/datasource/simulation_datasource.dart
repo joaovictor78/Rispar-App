@@ -28,7 +28,7 @@ class SimulationDataSource implements ISimulationDataSource {
       } else if (error.type == DioErrorType.other) {
         throw CreditSimulationNoInternetConnection();
       } else {
-        throw GeneralFailure();
+        throw GeneralFailure(error.message);
       }
     }
   }
