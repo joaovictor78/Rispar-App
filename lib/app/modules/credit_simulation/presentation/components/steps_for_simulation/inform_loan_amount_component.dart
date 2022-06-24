@@ -16,11 +16,26 @@ class InformLoanAmountComponent extends StatefulWidget {
 
 class _InformLoanAmountComponentState extends State<InformLoanAmountComponent> {
   final _controller = Modular.get<SimulationController>();
+  bool isValidButton = true;
   final _moneyTextController = MoneyMaskedTextController(
       leftSymbol: 'R\$ ',
       decimalSeparator: ',',
       thousandSeparator: '.',
       initialValue: 1000);
+  @override
+  void initState() {
+    _moneyTextController.addListener(() {
+      setState(() {
+        if (_moneyTextController.numberValue >= 1000 &&
+            _moneyTextController.numberValue <= 300000) {
+          isValidButton = true;
+        } else {
+          isValidButton = false;
+        }
+      });
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +61,7 @@ class _InformLoanAmountComponentState extends State<InformLoanAmountComponent> {
               ),
             ),
             RichText(
+              key: Key("description"),
               text: TextSpan(
                 text: 'Insira um valor entre ',
                 style: TextStyle(
@@ -77,7 +93,6 @@ class _InformLoanAmountComponentState extends State<InformLoanAmountComponent> {
                 child: CustomInputWiget(
                   controller: _moneyTextController,
                   keyboardType: TextInputType.number,
-                  inputFormatters: [],
                   style: TextStyle(
                       fontSize: 27,
                       fontWeight: FontWeight.w500,
@@ -96,7 +111,7 @@ class _InformLoanAmountComponentState extends State<InformLoanAmountComponent> {
             _controller.amount = _moneyTextController.numberValue;
             _controller.navigateNextPage();
           },
-          enabled: true),
+          enabled: isValidButton),
     );
   }
 }
